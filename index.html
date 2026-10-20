@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аромаваза — увлажнитель и аромадиффузор, 2 200 ₽ с доставкой</title>
+  <meta name="description" content="Ультразвуковой аромадиффузор в виде вазы. 400 мл, таймер, ночник. 2 200 ₽ за штуку, доставка СДЭК по России включена. Оплата при получении.">
+  <meta name="theme-color" content="#f3eee6">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f3eee6;
+      --card: #fffcf8;
+      --ink: #2a211b;
+      --muted: #6d6158;
+      --line: #e4d8cc;
+      --oak: #a67c42;
+      --walnut: #3a2a22;
+      --sage: #1e6a44;
+      --sage-dark: #164e32;
+      --shadow: 0 18px 50px rgba(58, 42, 34, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 80% -10%, rgba(166, 124, 66, 0.16), transparent 60%),
+        var(--paper);
+      font-family: Manrope, "Segoe UI", sans-serif;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; }
+    button, input, textarea { font: inherit; }
+
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    .serif { font-family: "Cormorant Garamond", Georgia, serif; font-weight: 500; letter-spacing: -0.02em; }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(14px);
+      background: rgba(243, 238, 230, 0.88);
+      border-bottom: 1px solid rgba(58, 42, 34, 0.08);
+    }
+    .bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 72px;
+    }
+    .brand { text-decoration: none; }
+    .brand strong {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1;
+    }
+    .brand span { color: var(--muted); font-size: 13px; }
+    .bar-links { display: flex; align-items: center; gap: 22px; }
+    .bar-links a { text-decoration: none; color: var(--muted); font-size: 15px; }
+    .bar-links a:hover { color: var(--ink); }
+    .phone { text-decoration: none; font-weight: 700; letter-spacing: -0.02em; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      cursor: pointer;
+      font-weight: 700;
+    }
+    .btn-sage { background: var(--sage); color: #f6f3ee; }
+    .btn-sage:hover { background: var(--sage-dark); }
+    .btn-line { background: transparent; border-color: rgba(58, 42, 34, 0.22); color: var(--ink); }
+    .btn-line:hover { background: rgba(255, 255, 255, 0.55); }
+    .btn:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus-visible {
+      outline: 2px solid var(--sage);
+      outline-offset: 3px;
+    }
+
+    .hero { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 36px; align-items: center; padding: 42px 0 28px; }
+    .eyebrow {
+      margin: 0 0 12px;
+      color: var(--oak);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    h1 { margin: 0 0 14px; font-size: clamp(42px, 5vw, 68px); line-height: 0.92; }
+    .lede { margin: 0 0 22px; max-width: 46ch; font-size: 18px; color: var(--muted); }
+    .price-row { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px; }
+    .price { font-family: "Cormorant Garamond", Georgia, serif; font-size: 54px; line-height: 1; font-weight: 600; }
+    .price small { display: block; margin-top: 4px; font-family: Manrope, sans-serif; font-size: 14px; font-weight: 500; color: var(--muted); }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 18px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+    .chips li {
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(255, 252, 248, 0.8);
+      border: 1px solid var(--line);
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .stage {
+      background: #fff;
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 18px 18px 8px;
+    }
+    .stage img { width: 100%; height: min(62vh, 620px); object-fit: contain; }
+    .swatches { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 8px 0 10px; }
+    .swatch {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-align: left;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 8px 10px;
+      cursor: pointer;
+      color: var(--ink);
+    }
+    .swatch[aria-pressed="true"] { border-color: var(--walnut); box-shadow: inset 0 0 0 1px var(--walnut); }
+    .dot { width: 28px; height: 28px; border-radius: 50%; flex: none; border: 1px solid rgba(0,0,0,0.08); }
+    .dot-light { background: linear-gradient(145deg, #f0d7a4, #c79655 55%, #8a5a2b); }
+    .dot-dark { background: linear-gradient(145deg, #8a6a52, #4a3428 50%, #2a1c16); }
+    .swatch b { display: block; font-size: 14px; font-weight: 700; }
+    .swatch small { display: block; color: var(--muted); font-size: 12px; font-weight: 500; }
+
+    section { padding: 28px 0; }
+    h2 { margin: 0 0 8px; font-size: clamp(34px, 4vw, 48px); line-height: 1; }
+    .sub { margin: 0 0 22px; color: var(--muted); max-width: 52ch; }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .card {
+      background: var(--card);
+      border: 1px solid rgba(58, 42, 34, 0.06);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+    .card em {
+      display: block;
+      margin-bottom: 10px;
+      font-style: normal;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 28px;
+      color: var(--oak);
+    }
+    .card h3 { margin: 0 0 8px; font-size: 20px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .step { padding: 8px 8px 0 0; }
+    .step b {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 40px;
+      font-weight: 500;
+      color: var(--oak);
+      line-height: 1;
+    }
+    .step h3 { margin: 6px 0; font-size: 18px; }
+    .step p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    .split { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 18px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 12px 0; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { width: 42%; font-weight: 600; color: var(--ink); }
+    td { color: var(--muted); }
+    .kit { list-style: none; padding: 0; margin: 0; }
+    .kit li { padding: 10px 0; border-bottom: 1px solid var(--line); }
+    .kit li:last-child { border-bottom: 0; }
+
+    .note {
+      background: var(--walnut);
+      color: #f6f1ea;
+      border-radius: 28px;
+      padding: 28px;
+    }
+    .note h2 { color: #fff; }
+    .note p { margin: 0 0 10px; color: rgba(246, 241, 234, 0.82); }
+    .note strong { color: #fff; }
+
+    .faq { display: grid; gap: 8px; }
+    details {
+      background: var(--card);
+      border-radius: 16px;
+      border: 1px solid rgba(58, 42, 34, 0.06);
+      padding: 0 16px;
+    }
+    summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 16px 28px 16px 0;
+      font-weight: 700;
+      position: relative;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 0;
+      top: 14px;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 28px;
+      line-height: 1;
+      color: var(--oak);
+    }
+    details[open] summary::after { content: "–"; }
+    details p { margin: 0 0 16px; color: var(--muted); }
+
+    .order {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 22px;
+      align-items: start;
+    }
+    form {
+      background: var(--card);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 12px;
+    }
+    label { display: grid; gap: 6px; font-size: 14px; font-weight: 650; }
+    input, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 12px;
+      padding: 12px 12px;
+      color: var(--ink);
+    }
+    textarea { min-height: 84px; resize: vertical; }
+    .colors { display: flex; gap: 8px; flex-wrap: wrap; }
+    .colors label {
+      font-weight: 600;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .colors input { width: auto; }
+    .form-note { margin: 0; color: var(--muted); font-size: 14px; }
+    .sent { display: none; margin: 0; padding: 12px; border-radius: 12px; background: #e7f3ec; color: var(--sage-dark); }
+
+    footer {
+      padding: 28px 0 110px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer a { color: var(--ink); }
+
+    .dock {
+      display: none;
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 30;
+      gap: 8px;
+      padding: 10px 12px calc(10px + env(safe-area-inset-bottom));
+      background: rgba(255, 252, 248, 0.94);
+      border-top: 1px solid var(--line);
+    }
+    .dock .btn { flex: 1; }
+
+    @media (max-width: 860px) {
+      .hero, .grid-3, .steps, .split, .order { grid-template-columns: 1fr; }
+      .bar-links a:not(.btn) { display: none; }
+      .brand span { display: none; }
+      .bar { min-height: 60px; }
+      .stage img { height: 420px; }
+      h1 { font-size: 44px; }
+      .dock { display: flex; }
+      .actions .btn { width: 100%; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap bar">
+      <a class="brand" href="#top">
+        <strong>Аромаваза</strong>
+        <span>увлажнитель и аромадиффузор</span>
+      </a>
+      <nav class="bar-links" aria-label="Разделы">
+        <a href="#how">Как работает</a>
+        <a href="#specs">Характеристики</a>
+        <a href="#delivery">Доставка</a>
+        <a class="phone" href="tel:+79272254778">+7 927 225-47-78</a>
+        <a class="btn btn-sage" href="#order">Заказать</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <p class="eyebrow">Доставка по России уже в цене</p>
+        <h1 class="serif">Ваза, которая увлажняет комнату</h1>
+        <p class="lede">Ультразвуковой диффузор на 400&nbsp;мл. Холодный пар, таймер и ночник на семь цветов. Стоит на тумбе как предмет, а не как бытовой прибор.</p>
+        <div class="price-row">
+          <p class="price">2&nbsp;200&nbsp;₽<small>за одну штуку, доставка включена</small></p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-sage" href="#order">Оформить заказ</a>
+          <a class="btn btn-line" href="https://t.me/dantat01" target="_blank" rel="noopener">Написать в Telegram</a>
+        </div>
+        <ul class="chips">
+          <li>Оплата при получении в СДЭК</li>
+          <li>Два цвета под дерево</li>
+          <li>Сам выключается без воды</li>
+        </ul>
+      </div>
+      <div class="stage">
+        <img id="product" src="light.jpg" width="523" height="679" alt="Аромадиффузор в форме вазы, цвет светлый дуб">
+        <div class="swatches" role="group" aria-label="Цвет корпуса">
+          <button class="swatch" type="button" data-color="light" aria-pressed="true">
+            <i class="dot dot-light" aria-hidden="true"></i>
+            <span><b>Светлый дуб</b><small>тёплый, на светлую комнату</small></span>
+          </button>
+          <button class="swatch" type="button" data-color="dark" aria-pressed="false">
+            <i class="dot dot-dark" aria-hidden="true"></i>
+            <span><b>Тёмный орех</b><small>глубже, к тёмной мебели</small></span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap">
+        <h2 class="serif">Три дела одним прибором</h2>
+        <p class="sub">Вода даёт влажный воздух. Несколько капель масла — запах. Подсветку можно оставить на ночь или выключить совсем.</p>
+        <div class="grid-3">
+          <article class="card">
+            <em>01</em>
+            <h3>Увлажняет</h3>
+            <p>Холодный ультразвуковой пар на комнату примерно до 25&nbsp;м². Зимой, когда батареи сушат воздух, этого хватает на спальню или кабинет.</p>
+          </article>
+          <article class="card">
+            <em>02</em>
+            <h3>Пахнет как решите вы</h3>
+            <p>3–5 капель эфирного масла в воду. Масло не греется, запах остаётся мягким. Можно включить и без масла — будет только пар.</p>
+          </article>
+          <article class="card">
+            <em>03</em>
+            <h3>Светит тихо</h3>
+            <p>Кольцо снизу: семь цветов, один зафиксированный или выключенный свет. В спальне работает как ночник, вентилятора внутри нет.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="wrap">
+        <h2 class="serif">Как включить</h2>
+        <p class="sub">На корпусе две кнопки: MIST — пар и таймер, LIGHT — свет. Инструкция в коробке часто на английском, здесь короткая версия.</p>
+        <div class="steps">
+          <div class="step">
+            <b>1</b>
+            <h3>Налить воду</h3>
+            <p>Снимите верх. Мерным стаканом долейте воду не выше отметки. Лучше фильтрованную.</p>
+          </div>
+          <div class="step">
+            <b>2</b>
+            <h3>Масло по желанию</h3>
+            <p>Несколько капель в воду. Духи и густые отдушки не лейте — забьют мембрану.</p>
+          </div>
+          <div class="step">
+            <b>3</b>
+            <h3>Поставить время</h3>
+            <p>Кнопка MIST: 1 час, 3 часа, 6 часов или пока не кончится вода.</p>
+          </div>
+          <div class="step">
+            <b>4</b>
+            <h3>Выбрать свет</h3>
+            <p>LIGHT листает цвета. Можно оставить один или погасить и спать в темноте.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="specs">
+      <div class="wrap split">
+        <div class="card">
+          <h2 class="serif">Характеристики</h2>
+          <table>
+            <tbody>
+              <tr><th>Резервуар</th><td>400 мл</td></tr>
+              <tr><th>От полного бака</th><td>до 10 часов</td></tr>
+              <tr><th>Таймер</th><td>1 час, 3 часа, 6 часов или непрерывно</td></tr>
+              <tr><th>Пар</th><td>ультразвук 2,4 МГц, холодный</td></tr>
+              <tr><th>Комната</th><td>примерно до 25 м²</td></tr>
+              <tr><th>Свет</th><td>7 цветов, можно зафиксировать или выключить</td></tr>
+              <tr><th>Питание</th><td>сеть 220 В, около 12 Вт</td></tr>
+              <tr><th>Размер</th><td>высота около 22 см, диаметр около 17 см</td></tr>
+              <tr><th>Корпус</th><td>пластик с фактурой дерева</td></tr>
+              <tr><th>Защита</th><td>выключается, когда вода заканчивается</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="card">
+          <h2 class="serif">В коробке</h2>
+          <ul class="kit">
+            <li>Аромадиффузор выбранного цвета</li>
+            <li>Сетевой адаптер</li>
+            <li>Мерный стакан</li>
+            <li>Инструкция</li>
+          </ul>
+          <p class="sub" style="margin-top:16px">Эфирное масло в комплект не входит. Пульт тоже не идёт: всё управляется кнопками на корпусе.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="delivery">
+      <div class="wrap">
+        <div class="note">
+          <h2 class="serif">2 200 ₽ при получении в СДЭК</h2>
+          <p>Доставка по всей России уже входит в эту сумму. Сначала пишете Данилу цвет и город. Он сдаёт посылку в СДЭК и присылает трек. Деньги — когда забираете посылку в пункте, не заранее.</p>
+          <p><strong>К оплате одна цифра: 2&nbsp;200&nbsp;₽.</strong> Срок в пути такой, какой СДЭК даёт до вашего города.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2 class="serif">Чтобы не было сюрприза</h2>
+        <div class="grid-3">
+          <article class="card">
+            <h3>Это не климат на всю квартиру</h3>
+            <p>Одна комната, около 25&nbsp;м². Гостиную с вторым светом он не вытянет.</p>
+          </article>
+          <article class="card">
+            <h3>Дерево на рисунке</h3>
+            <p>Корпус пластиковый, с фактурой дуба или ореха. Поэтому пар ему не страшен, и его можно протереть.</p>
+          </article>
+          <article class="card">
+            <h3>Если пришёл с браком</h3>
+            <p>Напишите Данилу в день получения и пришлите фото. Договоритесь о замене, а не разбирайтесь с этим в одиночку.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <h2 class="serif">Вопросы</h2>
+        <div class="faq">
+          <details>
+            <summary>Можно без масла?</summary>
+            <p>Да. Тогда это просто тихий увлажнитель. Масло добавляют, только если нужен запах.</p>
+          </details>
+          <details>
+            <summary>Какую воду и сколько масла?</summary>
+            <p>Чистая вода, лучше фильтрованная, не выше риски MAX. Масла — 3–5 капель. Колодезную жёсткую воду лучше не лить: на мебели появится белый налёт.</p>
+          </details>
+          <details>
+            <summary>Сильно шумит?</summary>
+            <p>Нет вентилятора и кипения. Слышно тихое шипение пара. В спальне его обычно оставляют на ночь.</p>
+          </details>
+          <details>
+            <summary>Когда и сколько платить?</summary>
+            <p>В пункте СДЭК, при получении. 2&nbsp;200&nbsp;₽ за штуку, доставка уже внутри. Предоплаты нет.</p>
+          </details>
+          <details>
+            <summary>Кто отправляет?</summary>
+            <p>Данил Матвеев. Телефон <a href="tel:+79272254778">+7&nbsp;927&nbsp;225-47-78</a>, Telegram <a href="https://t.me/dantat01">@dantat01</a>.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="order">
+      <div class="wrap order">
+        <div>
+          <h2 class="serif">Заказ в два сообщения</h2>
+          <p class="sub">Выберите цвет и оставьте город. Кнопка откроет Telegram с уже собранным текстом — Данилу останется подтвердить отправку.</p>
+          <p class="lede">Если удобнее голосом: <a href="tel:+79272254778">+7 927 225-47-78</a>, Данил Матвеев.</p>
+        </div>
+        <form id="order-form">
+          <div class="colors" role="radiogroup" aria-label="Цвет">
+            <label><input type="radio" name="color" value="Светлый дуб" checked> Светлый дуб</label>
+            <label><input type="radio" name="color" value="Тёмный орех"> Тёмный орех</label>
+          </div>
+          <label>Имя
+            <input name="name" autocomplete="name" required placeholder="Как к вам обращаться">
+          </label>
+          <label>Телефон
+            <input name="phone" type="tel" autocomplete="tel" required placeholder="+7">
+          </label>
+          <label>Город
+            <input name="city" autocomplete="address-level2" required placeholder="Куда везти СДЭК">
+          </label>
+          <label>Комментарий
+            <input name="comment" placeholder="Пункт СДЭК, если уже знаете">
+          </label>
+          <button class="btn btn-sage" type="submit">Открыть заказ в Telegram</button>
+          <p class="sent" id="sent" role="status">Текст заказа открыт в Telegram. Если окно не появилось, разрешите всплывающие окна или напишите @dantat01 сами.</p>
+          <p class="form-note">Откроется чат с Данилом, текст уже будет в поле. Уйдёт он только после вашей кнопки «Отправить» в Telegram.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Продавец: Данил Матвеев · <a href="tel:+79272254778">+7 927 225-47-78</a> · <a href="https://t.me/dantat01">t.me/dantat01</a></p>
+      <p>Аромаваза, 2&nbsp;200&nbsp;₽ за штуку. Доставка СДЭК по России включена, оплата при получении.</p>
+    </div>
+  </footer>
+
+  <div class="dock">
+    <a class="btn btn-line" href="tel:+79272254778">Позвонить</a>
+    <a class="btn btn-sage" href="#order">Заказать · 2 200 ₽</a>
+  </div>
+
+  <script>
+    const shots = {
+      light: { src: "light.jpg", alt: "Аромадиффузор в форме вазы, цвет светлый дуб", radio: "Светлый дуб" },
+      dark: { src: "dark.jpg", alt: "Аромадиффузор в форме вазы, цвет тёмный орех", radio: "Тёмный орех" }
+    };
+    const product = document.getElementById("product");
+    const swatches = document.querySelectorAll(".swatch");
+
+    function selectColor(key) {
+      const shot = shots[key];
+      product.src = shot.src;
+      product.alt = shot.alt;
+      swatches.forEach((btn) => btn.setAttribute("aria-pressed", btn.dataset.color === key ? "true" : "false"));
+      const radio = document.querySelector('input[name="color"][value="' + shot.radio + '"]');
+      if (radio) radio.checked = true;
+    }
+
+    swatches.forEach((btn) => btn.addEventListener("click", () => selectColor(btn.dataset.color)));
+    document.querySelectorAll('input[name="color"]').forEach((radio) => {
+      radio.addEventListener("change", () => {
+        selectColor(radio.value === "Тёмный орех" ? "dark" : "light");
+      });
+    });
+
+    document.getElementById("order-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const lines = [
+        "Здравствуйте! Хочу аромадиффузор.",
+        "Цвет: " + data.get("color"),
+        "Имя: " + data.get("name").trim(),
+        "Телефон: " + data.get("phone").trim(),
+        "Город: " + data.get("city").trim(),
+        "Цена: 2200 ₽, оплата при получении в СДЭК"
+      ];
+      const comment = (data.get("comment") || "").trim();
+      if (comment) lines.push("Комментарий: " + comment);
+      const url = "https://t.me/dantat01?text=" + encodeURIComponent(lines.join("\n"));
+      window.open(url, "_blank", "noopener");
+      const sent = document.getElementById("sent");
+      sent.style.display = "block";
+    });
+  </script>
+</body>
+</html>
